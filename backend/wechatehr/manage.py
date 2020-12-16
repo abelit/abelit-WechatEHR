@@ -28,14 +28,14 @@ manager.add_command('db', MigrateCommand)
 
 # Add Custom Command
 @manager.option("-n", "--name", dest="name", default="www.baidu.com")
-def hello(name):
-    print("hello world!")
+def foo(name):
+    print("foo!")
     print(name)
 
 @manager.option("-n", "--name", dest="name", default="www.baidu.com")
-def world(name):
-    print("haha")
-
+def bar(name):
+    print("bar!")
+    print(name)
 
 if __name__ == '__main__':
     manager.run()

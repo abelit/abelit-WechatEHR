@@ -17,22 +17,22 @@ from flask_restful import Api, Resource
 
 
 def create_home(app):
-    from .app.home.views import homebp
+    from app.home.views import homebp
 
     # register blueprint
     app.register_blueprint(homebp)
 
 def create_ehr(app):
-    from .app.ehr.views import ehrbp
-    from .app.ehr.views import ehrapi
-    from .app.ehr.views import EHRJob
+    from app.ehr.views import ehrbp
+    from app.ehr.views import ehrapi
+    from app.ehr.views import EHRJob
 
     ehrapi.add_resource(EHRJob, '/job')
     app.register_blueprint(ehrbp, url_prefix="/api/v1/ehr")
 
 def create_app():
-    from .db import db
-    from .config import config
+    from db import db
+    from config import config
 
     # create flask instance
     _app = Flask(__name__)
