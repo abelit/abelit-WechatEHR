@@ -1,5 +1,6 @@
 # abelit-WechatEHR
 
+## setup.cfg
 ```yml
 # setup.cfg
 [metadata]
@@ -46,4 +47,12 @@ testpaths = tests
 [coverage:run]
 branch = True
 source = wechatehr
+```
+
+## Run 
+
+```bash
+export FLASK_APP=wechatehr
+
+flask run
 ```
