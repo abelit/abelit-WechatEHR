@@ -1,6 +1,6 @@
 from flask import render_template, Blueprint, request, jsonify, current_app
 
-homebp = Blueprint("home", __name__)
+homebp = Blueprint("homebp", __name__)
 
 
 @homebp.route('/')
@@ -20,7 +20,7 @@ def ping():
     })
 
 
-@homebp.route('/api')
+@homebp.route('/api/v1')
 def get_api():
     rules = []
     for rule in current_app.url_map.iter_rules():

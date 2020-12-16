@@ -56,3 +56,9 @@ export FLASK_APP=wechatehr
 
 flask run
 ```
+
+##　API
+```bash
+curl  -X POST -H "Content-Type: application/json" -d '{"alias":"abelit1", "username":"chenying1", "surname":"cy1","email":"cycnenid@live.com","phone":"11285649896", "gender":"1","password":"123456"}' http://localhost:5000/api/v1/auth/register
+
+```

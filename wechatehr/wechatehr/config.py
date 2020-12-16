@@ -54,7 +54,7 @@ class BaseConfig(object):
     SECRET_KEY = 'SFASDFAS$%@#$Ddfdfd523SDFGKPOXf56734453$%4z(fdasFSAD'
 
     # 运行apps
-    APPS = ['home','ehr']
+    APPS = ['home','ehr', 'auth']
 
     # Scheduler
     # GLOBAL_SCHEDULER_ENABLE = False
@@ -66,11 +66,11 @@ class BaseConfig(object):
     # 使用docker环境时把127.0.0.1改为db的容器名称
     DIALECT = 'mysql'
     DRIVER = 'pymysql'
-    USERNAME = 'ehr'
-    PASSWORD = 'Passw0rd123!'
-    HOST = '10.46.101.70'
+    USERNAME = 'root'
+    PASSWORD = 'Passw0rd'
+    HOST = 'localhost'
     PORT = 3306
-    DATABASE = 'ehrdb'
+    DATABASE = 'wechatehrdb'
     SQLALCHEMY_DATABASE_URI = '{}+{}://{}:{}@{}:{}/{}?charset=utf8'.format(
         DIALECT, DRIVER, USERNAME, PASSWORD, HOST, PORT, DATABASE
     )

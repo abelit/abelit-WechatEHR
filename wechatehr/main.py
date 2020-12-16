@@ -17,23 +17,27 @@ from flask_restful import Api, Resource
 
 
 def create_home(app):
-    from app.home.views import homebp
+    from wechatehr.app.home.views import homebp
 
     # register blueprint
     app.register_blueprint(homebp)
 
+def create_auth(app):
+    from wechatehr.app.auth.views import authbp
+    app.register_blueprint(authbp, url_prefix="/api/v1/auth")
+
 def create_ehr(app):
-    from app.ehr.views import ehrbp
-    from app.ehr.views import ehrapi
-    from app.ehr.views import EHRJob,EHRJobList
+    from wechatehr.app.ehr.views import ehrbp
+    from wechatehr.app.ehr.views import ehrapi
+    from wechatehr.app.ehr.views import EHRJob,EHRJobList
 
     ehrapi.add_resource(EHRJob, '/job', endpoint="jobs")
     ehrapi.add_resource(EHRJobList, '/job/<string:id>', endpoint="job")
     app.register_blueprint(ehrbp, url_prefix="/api/v1/ehr")
 
 def create_app():
-    from db import db
-    from config import config
+    from wechatehr.db import db
+    from wechatehr.config import config
 
     # create flask instance
     _app = Flask(__name__)
@@ -67,6 +71,7 @@ def create_app():
     
     create_home(_app)  if 'home' in _app.config['APPS'] else None
     create_ehr(_app) if 'ehr' in _app.config['APPS'] else None
+    create_auth(_app) if 'auth' in _app.config['APPS'] else None
 
     return _app
 

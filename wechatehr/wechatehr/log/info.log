@@ -390,3 +390,94 @@
 2020-12-16 13:05:27,961 INFO 322720 140511031464320 in _internal 113  * Restarting with stat
 2020-12-16 13:05:28,298 WARNING 322764 140042924532096 in _internal 113  * Debugger is active!
 2020-12-16 13:05:28,299 INFO 322764 140042924532096 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:18:45,287 INFO 561632 140515654537600 in _internal 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 16:18:45,288 INFO 561632 140515654537600 in _internal 113  * Restarting with stat
+2020-12-16 16:18:45,623 WARNING 561677 140445886759296 in _internal 113  * Debugger is active!
+2020-12-16 16:18:45,624 INFO 561677 140445886759296 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:18:48,859 INFO 561677 140445838931712 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:18:48] "[37mGET / HTTP/1.1[0m" 200 -
+2020-12-16 16:19:03,067 INFO 561677 140445838931712 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:19:03] "[33mGET /api/v1/auth/proteted HTTP/1.1[0m" 404 -
+2020-12-16 16:20:32,549 INFO 561677 140445838931712 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:20:32] "[33mGET /api/v1/auth/ HTTP/1.1[0m" 404 -
+2020-12-16 16:21:06,312 INFO 561677 140445838931712 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:21:06] "[33mGET /api/v1/auth/ HTTP/1.1[0m" 404 -
+2020-12-16 16:21:09,614 INFO 561677 140445838931712 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:21:09] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:21:16,762 INFO 564753 140091218379136 in _internal 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 16:21:16,762 INFO 564753 140091218379136 in _internal 113  * Restarting with stat
+2020-12-16 16:21:17,112 WARNING 564794 140276022952320 in _internal 113  * Debugger is active!
+2020-12-16 16:21:17,112 INFO 564794 140276022952320 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:21:19,165 INFO 564794 140275975124736 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:21:19] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:21:29,328 INFO 564794 140275975124736 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:21:29] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:21:30,599 INFO 564794 140275975124736 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:21:30] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:21:33,736 INFO 565196 139652462223744 in _internal 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 16:21:33,737 INFO 565196 139652462223744 in _internal 113  * Restarting with stat
+2020-12-16 16:21:34,087 WARNING 565232 140418209251712 in _internal 113  * Debugger is active!
+2020-12-16 16:21:34,088 INFO 565232 140418209251712 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:21:35,623 INFO 565232 140418161424128 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:21:35] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:22:17,646 INFO 565232 140418161424128 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:22:17] "[33mGET /api/v1/auth/ping/ HTTP/1.1[0m" 404 -
+2020-12-16 16:22:20,629 INFO 565232 140418161424128 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:22:20] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:22:25,763 INFO 565232 140418161424128 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:22:25] "[33mGET /api/v1/ehr HTTP/1.1[0m" 404 -
+2020-12-16 16:22:28,646 INFO 565232 140418161424128 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:22:28] "[37mGET /api/v1/ehr/ping HTTP/1.1[0m" 200 -
+2020-12-16 16:22:32,137 INFO 565232 140418161424128 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:22:32] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:23:35,219 INFO 565232 140418209251712 in _internal 113  * Detected change in '/home/abelit/Documents/code/github/abelit-WechatEHR/wechatehr/wechatehr/app/home/views.py', reloading
+2020-12-16 16:23:35,299 INFO 565196 139652462223744 in _internal 113  * Restarting with stat
+2020-12-16 16:23:35,664 WARNING 567598 139941604856192 in _internal 113  * Debugger is active!
+2020-12-16 16:23:35,665 INFO 567598 139941604856192 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:23:39,881 INFO 567598 139941557028608 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:23:39] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:23:42,662 INFO 567598 139941557028608 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:23:42] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 16:23:48,911 INFO 567598 139941557028608 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:23:48] "[33mGET /api/v1/auth HTTP/1.1[0m" 404 -
+2020-12-16 16:23:52,449 INFO 567598 139941557028608 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:23:52] "[33mGET /api/v1/auth/ping HTTP/1.1[0m" 404 -
+2020-12-16 16:26:42,514 INFO 571607 139919250018688 in _internal 113  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-12-16 16:26:42,514 INFO 571607 139919250018688 in _internal 113  * Restarting with stat
+2020-12-16 16:26:42,809 WARNING 571643 140145752957312 in _internal 113  * Debugger is active!
+2020-12-16 16:26:42,810 INFO 571643 140145752957312 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:26:46,164 INFO 571643 140145698907904 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:26:46] "[37mGET /api/v1/auth/ping HTTP/1.1[0m" 200 -
+2020-12-16 16:26:53,063 INFO 571643 140145690515200 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:26:53] "[31m[1mGET /api/v1/auth/protected HTTP/1.1[0m" 401 -
+2020-12-16 16:30:35,787 INFO 576877 140621720904064 in _internal 113  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-12-16 16:30:35,788 INFO 576877 140621720904064 in _internal 113  * Restarting with stat
+2020-12-16 16:30:36,077 WARNING 576930 140292488032640 in _internal 113  * Debugger is active!
+2020-12-16 16:30:36,078 INFO 576930 140292488032640 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:31:06,312 INFO 576930 140292488032640 in _internal 113  * Detected change in '/home/abelit/Documents/code/github/abelit-WechatEHR/wechatehr/wechatehr/app/auth/views.py', reloading
+2020-12-16 16:31:06,384 INFO 576877 140621720904064 in _internal 113  * Restarting with stat
+2020-12-16 16:31:06,688 WARNING 577519 140241485099392 in _internal 113  * Debugger is active!
+2020-12-16 16:31:06,689 INFO 577519 140241485099392 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:33:17,300 INFO 580628 139926322237824 in _internal 113  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-12-16 16:33:17,301 INFO 580628 139926322237824 in _internal 113  * Restarting with stat
+2020-12-16 16:33:17,590 WARNING 580664 139671530148224 in _internal 113  * Debugger is active!
+2020-12-16 16:33:17,590 INFO 580664 139671530148224 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:34:27,976 INFO 580664 139671476098816 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:34:27] "[33mGET /api HTTP/1.1[0m" 404 -
+2020-12-16 16:34:31,523 INFO 580664 139671396939520 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:34:31] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 16:35:59,481 INFO 580664 139671476098816 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:35:59] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 16:37:05,875 INFO 580664 139671396939520 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:37:05] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 16:38:39,221 INFO 580664 139671530148224 in _internal 113  * Detected change in '/home/abelit/Documents/code/github/abelit-WechatEHR/wechatehr/wechatehr/app/home/views.py', reloading
+2020-12-16 16:38:39,290 INFO 580628 139926322237824 in _internal 113  * Restarting with stat
+2020-12-16 16:38:39,618 WARNING 587036 139915555410304 in _internal 113  * Debugger is active!
+2020-12-16 16:38:39,619 INFO 587036 139915555410304 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:38:41,615 INFO 587036 139915501360896 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:38:41] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 16:41:28,692 INFO 590984 140665710563712 in _internal 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 16:41:34,342 INFO 591147 139675890467200 in _internal 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 16:41:36,395 INFO 591147 139675839981312 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:41:36] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 16:41:37,600 INFO 591147 139675759015680 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:41:37] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 16:47:00,264 INFO 597864 139909216534912 in _internal 113  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2020-12-16 16:47:00,265 INFO 597864 139909216534912 in _internal 113  * Restarting with stat
+2020-12-16 16:47:00,553 WARNING 597900 140330187760000 in _internal 113  * Debugger is active!
+2020-12-16 16:47:00,553 INFO 597900 140330187760000 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:47:04,586 INFO 597900 140330187760000 in _internal 113  * Detected change in '/home/abelit/Documents/code/github/abelit-WechatEHR/wechatehr/main.py', reloading
+2020-12-16 16:47:04,650 INFO 597864 139909216534912 in _internal 113  * Restarting with stat
+2020-12-16 16:47:04,959 WARNING 597994 139972057997696 in _internal 113  * Debugger is active!
+2020-12-16 16:47:04,959 INFO 597994 139972057997696 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 16:47:15,392 INFO 597994 139972003948288 in _internal 113 127.0.0.1 - - [16/Dec/2020 16:47:15] "[37mGET /api/v1 HTTP/1.1[0m" 200 -
+2020-12-16 17:50:22,116 INFO 674029 140319995572608 in _internal 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 17:50:22,117 INFO 674029 140319995572608 in _internal 113  * Restarting with stat
+2020-12-16 17:50:22,461 WARNING 674073 139693799731584 in _internal 113  * Debugger is active!
+2020-12-16 17:50:22,462 INFO 674073 139693799731584 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 17:50:24,792 INFO 674073 139693751641856 in _internal 113 127.0.0.1 - - [16/Dec/2020 17:50:24] "[37mGET /api/v1/auth/ping HTTP/1.1[0m" 200 -
+2020-12-16 17:50:38,994 INFO 674073 139693751641856 in _internal 113 127.0.0.1 - - [16/Dec/2020 17:50:38] "[31m[1mGET /api/v1/auth/register HTTP/1.1[0m" 405 -
+2020-12-16 17:57:53,320 INFO 674073 139693751641856 in _internal 113 127.0.0.1 - - [16/Dec/2020 17:57:53] "[31m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 400 -
+2020-12-16 17:59:14,406 INFO 674073 139693751641856 in _internal 113 127.0.0.1 - - [16/Dec/2020 17:59:14] "[31m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 400 -
+2020-12-16 18:00:19,110 INFO 674073 139693751641856 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:00:19] "[35m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 500 -
+2020-12-16 18:01:10,358 INFO 674073 139693799731584 in _internal 113  * Detected change in '/home/abelit/Documents/code/github/abelit-WechatEHR/wechatehr/wechatehr/app/auth/views.py', reloading
+2020-12-16 18:01:10,441 INFO 674029 140319995572608 in _internal 113  * Restarting with stat
+2020-12-16 18:01:10,831 WARNING 686477 140058109493632 in _internal 113  * Debugger is active!
+2020-12-16 18:01:10,832 INFO 686477 140058109493632 in _internal 113  * Debugger PIN: 223-899-318
+2020-12-16 18:01:16,362 INFO 686477 140058061403904 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:01:16] "[37mPOST /api/v1/auth/register HTTP/1.1[0m" 200 -
+2020-12-16 18:02:29,145 INFO 686477 140058061403904 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:02:29] "[35m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 500 -
+2020-12-16 18:02:35,614 INFO 686477 140058061403904 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:02:35] "[35m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 500 -
+2020-12-16 18:03:06,969 INFO 686477 140058061403904 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:03:06] "[35m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 500 -

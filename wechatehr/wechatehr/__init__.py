@@ -22,6 +22,10 @@ def create_home(app):
     # register blueprint
     app.register_blueprint(homebp)
 
+def create_auth(app):
+    from .app.auth.views import authbp
+    app.register_blueprint(authbp, url_prefix="/api/v1/auth")
+
 def create_ehr(app):
     from .app.ehr.views import ehrbp
     from .app.ehr.views import ehrapi
@@ -67,5 +71,11 @@ def create_app():
     
     create_home(_app)  if 'home' in _app.config['APPS'] else None
     create_ehr(_app) if 'ehr' in _app.config['APPS'] else None
+    create_auth(_app) if 'auth' in _app.config['APPS'] else None
 
     return _app
+
+
+if __name__ == "__main__":
+    app = create_app()
+    app.run(host="0.0.0.0", port=5000)
