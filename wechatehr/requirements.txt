@@ -1,0 +1,9 @@
+Flask
+PyMySQL
+flask-restful
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Script
+Flask-JWT-Extended
+Flask-Cors
+itsdangerous

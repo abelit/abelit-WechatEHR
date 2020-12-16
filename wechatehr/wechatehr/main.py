@@ -25,9 +25,10 @@ def create_home(app):
 def create_ehr(app):
     from app.ehr.views import ehrbp
     from app.ehr.views import ehrapi
-    from app.ehr.views import EHRJob
+    from app.ehr.views import EHRJob,EHRJobList
 
-    ehrapi.add_resource(EHRJob, '/job')
+    ehrapi.add_resource(EHRJob, '/job', endpoint="jobs")
+    ehrapi.add_resource(EHRJobList, '/job/<string:id>', endpoint="job")
     app.register_blueprint(ehrbp, url_prefix="/api/v1/ehr")
 
 def create_app():
