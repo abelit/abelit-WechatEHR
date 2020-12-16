@@ -10,7 +10,7 @@
 @Desc    :   None
 '''
 
-from flask import Flask, request, jsonify
+from flask import Flask, json, request, jsonify
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from flask_restful import Api, Resource
@@ -34,6 +34,19 @@ def create_ehr(app):
     ehrapi.add_resource(EHRJob, '/job', endpoint="jobs")
     ehrapi.add_resource(EHRJobList, '/job/<string:id>', endpoint="job")
     app.register_blueprint(ehrbp, url_prefix="/api/v1/ehr")
+
+def create_status_code(app): 
+    @app.errorhandler(404)
+    def not_found(err):
+        return jsonify({"msg": str(err),"data": [],"code": 404}),404
+
+    @app.errorhandler(401)
+    def not_found(err):
+        return jsonify({"msg": str(err),"data": [],"code": 401}),401
+
+    @app.errorhandler(500)
+    def not_found(err):
+        return jsonify({"msg": str(err),"data": [],"code": 401}),401
 
 def create_app():
     from .db import db
@@ -72,6 +85,7 @@ def create_app():
     create_home(_app)  if 'home' in _app.config['APPS'] else None
     create_ehr(_app) if 'ehr' in _app.config['APPS'] else None
     create_auth(_app) if 'auth' in _app.config['APPS'] else None
+    create_status_code(_app) if 'err' in _app.config['APPS'] else None
 
     return _app
 

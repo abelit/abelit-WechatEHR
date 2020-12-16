@@ -64,3 +64,108 @@ Traceback (most recent call last):
   File "/home/abelit/.pyenv/versions/3.5.6/lib/python3.5/site-packages/flask/app.py", line 2112, in process_response
     response = handler(response)
 TypeError: middle_end_request() takes 0 positional arguments but 1 was given
+2020-12-17 01:20:37,231 ERROR 18816 3316 in app 1761 Exception on /api/v1/ehr/job [GET]
+Traceback (most recent call last):
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Workspace\code\github\abelit-WechatEHR\wechatehr\wechatehr\app\ehr\views.py", line 20, in get
+    abort(500)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 32, in abort
+    original_flask_abort(http_status_code)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.
+2020-12-17 01:21:12,559 ERROR 16784 21356 in app 1761 Exception on /api/v1/ehr/job [GET]
+Traceback (most recent call last):
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Workspace\code\github\abelit-WechatEHR\wechatehr\wechatehr\app\ehr\views.py", line 20, in get
+    abort(501)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 32, in abort
+    original_flask_abort(http_status_code)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotImplemented: 501 Not Implemented: The server does not support the action requested by the browser.
+2020-12-17 01:21:13,599 ERROR 16784 21356 in app 1761 Exception on /api/v1/ehr/job [GET]
+Traceback (most recent call last):
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Workspace\code\github\abelit-WechatEHR\wechatehr\wechatehr\app\ehr\views.py", line 20, in get
+    abort(501)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 32, in abort
+    original_flask_abort(http_status_code)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotImplemented: 501 Not Implemented: The server does not support the action requested by the browser.
+2020-12-17 01:21:36,966 ERROR 4852 19408 in app 1761 Exception on /api/v1/ehr/job [GET]
+Traceback (most recent call last):
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Workspace\code\github\abelit-WechatEHR\wechatehr\wechatehr\app\ehr\views.py", line 20, in get
+    abort(501)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 32, in abort
+    original_flask_abort(http_status_code)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotImplemented: 501 Not Implemented: The server does not support the action requested by the browser.
+2020-12-17 01:21:50,114 ERROR 4968 21456 in app 1761 Exception on /api/v1/ehr/job [GET]
+Traceback (most recent call last):
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 468, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 583, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "D:\Workspace\code\github\abelit-WechatEHR\wechatehr\wechatehr\app\ehr\views.py", line 20, in get
+    abort(501)
+  File "C:\Programs\Python\Python36\lib\site-packages\flask_restful\__init__.py", line 32, in abort
+    original_flask_abort(http_status_code)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 707, in abort
+    return _aborter(status, *args, **kwargs)
+  File "C:\Programs\Python\Python36\lib\site-packages\werkzeug\exceptions.py", line 687, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotImplemented: 501 Not Implemented: The server does not support the action requested by the browser.

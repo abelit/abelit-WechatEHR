@@ -1,6 +1,6 @@
 __pycache__
-log/info.log
-log/error.log
+info.log
+error.log
 build/
 dist/
 *.egg-info

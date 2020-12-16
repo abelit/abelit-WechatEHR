@@ -53,8 +53,8 @@ class BaseConfig(object):
     # 配置Flask加密密钥
     SECRET_KEY = 'SFASDFAS$%@#$Ddfdfd523SDFGKPOXf56734453$%4z(fdasFSAD'
 
-    # 运行apps
-    APPS = ['home','ehr', 'auth']
+    # 启动的app组件
+    APPS = ['err','home','ehr', 'auth']
 
     # Scheduler
     # GLOBAL_SCHEDULER_ENABLE = False

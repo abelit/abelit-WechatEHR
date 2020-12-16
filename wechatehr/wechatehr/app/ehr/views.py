@@ -1,5 +1,5 @@
-from flask import render_template, Blueprint, request, jsonify, current_app
-from flask_restful import Api, Resource,request
+from flask import json, render_template, Blueprint, request, jsonify, current_app
+from flask_restful import Api, Resource, abort,request
 
 ehrbp = Blueprint("ehrbp", __name__)
 
@@ -17,6 +17,7 @@ def ping():
 
 class EHRJob(Resource):
     def get(self):
+        abort(401)
         return jsonify({
             "name": "ehrjob",
             "method": "get"
