@@ -9,6 +9,7 @@ from flask_jwt_extended import (
 from wechatehr.db import db
 from wechatehr.models.users import User
 from sqlalchemy import or_
+import datetime
 
 authbp = Blueprint('authbp', __name__)
 
@@ -91,12 +92,12 @@ def login():
                 'access_token': create_access_token(identity=user.username, expires_delta=access_expires),
                 'refresh_token': create_refresh_token(identity=user.username, expires_delta=refresh_expires)
             }]
-            res["msg"] = "ok"
+            res["msg"] = "get user successfully."
             res["code"] = status_code
     except:
         status_code = 500
         res["data"] = []
-        res["msg"] = "ok"
+        res["msg"] = "get user failed."
         res["code"] = status_code
 
     return jsonify(res), status_code

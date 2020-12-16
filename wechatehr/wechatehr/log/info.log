@@ -481,3 +481,89 @@
 2020-12-16 18:02:29,145 INFO 686477 140058061403904 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:02:29] "[35m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 500 -
 2020-12-16 18:02:35,614 INFO 686477 140058061403904 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:02:35] "[35m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 500 -
 2020-12-16 18:03:06,969 INFO 686477 140058061403904 in _internal 113 127.0.0.1 - - [16/Dec/2020 18:03:06] "[35m[1mPOST /api/v1/auth/register HTTP/1.1[0m" 500 -
+2020-12-16 21:25:10,102 INFO 8692 8732 in _internal 88  * Restarting with stat
+2020-12-16 21:25:10,876 WARNING 10208 10484 in _internal 88  * Debugger is active!
+2020-12-16 21:25:10,884 INFO 10208 10484 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 21:25:10,918 INFO 10208 12260 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 21:25:12,908 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:25:12] "GET / HTTP/1.1" 200 -
+2020-12-16 21:25:13,185 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:25:13] "GET /favicon.ico HTTP/1.1" 404 -
+2020-12-16 21:25:21,622 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:25:21] "GET /api/v1/ping HTTP/1.1" 404 -
+2020-12-16 21:25:24,611 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:25:24] "GET /api/v1 HTTP/1.1" 200 -
+2020-12-16 21:25:29,960 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:25:29] "GET /api/v1/auth HTTP/1.1" 404 -
+2020-12-16 21:25:32,766 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:25:32] "GET /api/v1/auth/ping HTTP/1.1" 200 -
+2020-12-16 21:28:18,574 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:28:18] "GET /api/v1/auth/login HTTP/1.1" 405 -
+2020-12-16 21:28:18,587 INFO 10208 12260 in _internal 88 127.0.0.1 - - [16/Dec/2020 21:28:18] "GET /api/v1/auth/ping HTTP/1.1" 200 -
+2020-12-16 22:42:02,556 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:42:03,302 WARNING 11752 11720 in _internal 88  * Debugger is active!
+2020-12-16 22:42:03,309 INFO 11752 11720 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:42:03,323 INFO 11752 9808 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:42:08,562 INFO 11752 9808 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:42:08] "POST /api/v1/auth/register HTTP/1.1" 200 -
+2020-12-16 22:43:16,080 INFO 11752 9808 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:43:16] "POST /api/v1/auth/login HTTP/1.1" 500 -
+2020-12-16 22:45:09,708 INFO 11752 11720 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:45:09,781 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:45:10,540 WARNING 18888 18704 in _internal 88  * Debugger is active!
+2020-12-16 22:45:10,546 INFO 18888 18704 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:45:10,563 INFO 18888 18584 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:45:19,541 INFO 18888 18584 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:45:19] "POST /api/v1/auth/login HTTP/1.1" 500 -
+2020-12-16 22:45:42,195 INFO 18888 18704 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:45:42,251 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:45:42,979 WARNING 7464 9532 in _internal 88  * Debugger is active!
+2020-12-16 22:45:42,986 INFO 7464 9532 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:45:42,999 INFO 7464 19300 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:45:50,368 INFO 7464 9532 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:45:50,422 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:45:51,181 WARNING 6188 7188 in _internal 88  * Debugger is active!
+2020-12-16 22:45:51,187 INFO 6188 7188 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:45:51,195 INFO 6188 11836 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:45:56,327 INFO 6188 11836 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:45:56] "POST /api/v1/auth/login HTTP/1.1" 500 -
+2020-12-16 22:46:22,775 INFO 6188 7188 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:46:22,838 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:46:23,579 WARNING 9360 7452 in _internal 88  * Debugger is active!
+2020-12-16 22:46:23,586 INFO 9360 7452 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:46:23,598 INFO 9360 17360 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:46:30,023 INFO 9360 17360 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:46:30] "POST /api/v1/auth/login HTTP/1.1" 500 -
+2020-12-16 22:47:47,703 INFO 9360 7452 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:47:47,763 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:47:48,513 WARNING 2144 7668 in _internal 88  * Debugger is active!
+2020-12-16 22:47:48,520 INFO 2144 7668 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:47:48,535 INFO 2144 8212 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:47:53,325 INFO 2144 8212 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:47:53] "POST /api/v1/auth/login HTTP/1.1" 500 -
+2020-12-16 22:48:37,985 INFO 2144 7668 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:48:38,050 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:48:38,877 WARNING 19392 19140 in _internal 88  * Debugger is active!
+2020-12-16 22:48:38,884 INFO 19392 19140 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:48:38,892 INFO 19392 8588 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:48:42,525 INFO 19392 8588 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:48:42] "POST /api/v1/auth/login HTTP/1.1" 500 -
+2020-12-16 22:49:12,599 INFO 19392 19140 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:49:12,660 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:49:13,435 WARNING 12832 13912 in _internal 88  * Debugger is active!
+2020-12-16 22:49:13,442 INFO 12832 13912 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:49:13,458 INFO 12832 9640 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:49:18,753 INFO 12832 13912 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:49:18,808 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:49:19,556 WARNING 9116 3672 in _internal 88  * Debugger is active!
+2020-12-16 22:49:19,562 INFO 9116 3672 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:49:19,574 INFO 9116 9012 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:49:23,570 INFO 9116 9012 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:49:23] "POST /api/v1/auth/login HTTP/1.1" 500 -
+2020-12-16 22:49:51,236 INFO 9116 3672 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:49:51,294 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:49:52,022 WARNING 9140 6212 in _internal 88  * Debugger is active!
+2020-12-16 22:49:52,030 INFO 9140 6212 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:49:52,038 INFO 9140 15088 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:49:57,490 INFO 9140 15088 in _internal 88 127.0.0.1 - - [16/Dec/2020 22:49:57] "POST /api/v1/auth/login HTTP/1.1" 200 -
+2020-12-16 22:50:05,713 INFO 9140 6212 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:50:05,772 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:50:06,522 WARNING 1028 88 in _internal 88  * Debugger is active!
+2020-12-16 22:50:06,529 INFO 1028 88 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:50:06,543 INFO 1028 17844 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:50:08,666 INFO 1028 88 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:50:08,736 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:50:09,499 WARNING 2396 7208 in _internal 88  * Debugger is active!
+2020-12-16 22:50:09,506 INFO 2396 7208 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:50:09,514 INFO 2396 12676 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:50:52,663 INFO 2396 7208 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
+2020-12-16 22:50:52,719 INFO 8472 6808 in _internal 88  * Restarting with stat
+2020-12-16 22:50:53,465 WARNING 18628 18836 in _internal 88  * Debugger is active!
+2020-12-16 22:50:53,471 INFO 18628 18836 in _internal 88  * Debugger PIN: 953-228-383
+2020-12-16 22:50:53,479 INFO 18628 11456 in _internal 88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-12-16 22:51:02,940 INFO 18628 18836 in _internal 88  * Detected change in 'D:\\Workspace\\code\\github\\abelit-WechatEHR\\wechatehr\\wechatehr\\app\\auth\\views.py', reloading
