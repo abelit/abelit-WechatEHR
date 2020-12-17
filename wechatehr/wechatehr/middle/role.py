@@ -12,11 +12,17 @@ class RoleMiddle(object):
         # username = get_jwt_identity()
         request = Request(environ)
         # print(request.headers.get('Authorization'))
-        print("middleware ......")
+        print("before middleware ......")
         # print(request.path)
         # print(request.args)
         # print(username)
 
         # print(environ)
+
+        app = self.wsgi_app(environ, start_response)
+
+        # print(get_jwt_identity())
+
+        print("after middleware ......")
         
-        return self.wsgi_app(environ, start_response)
+        return app

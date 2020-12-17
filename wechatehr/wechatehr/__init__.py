@@ -90,12 +90,12 @@ def create_app():
     @_app.before_request
     def middle_start_request():
         print("start acccessing " + request.path + " from " + request.remote_addr)
-        print(get_jwt_identity())
+        # print(get_jwt_identity())
 
     @_app.after_request
     def middle_end_request(response):
         print("finnish  acccessing " + request.path + " from " + request.path )
-        print(get_jwt_identity())
+        # print(get_jwt_identity())
         return response
 
     create_home(_app)  if 'home' in _app.config['APPS'] else None
