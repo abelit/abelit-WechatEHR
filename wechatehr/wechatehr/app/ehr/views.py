@@ -1,5 +1,8 @@
 from flask import json, render_template, Blueprint, request, jsonify, current_app
+from flask_jwt_extended.utils import get_jwt_identity
 from flask_restful import Api, Resource, abort,request
+
+from flask_jwt_extended import jwt_required
 
 ehrbp = Blueprint("ehrbp", __name__)
 
@@ -15,48 +18,54 @@ def ping():
         "version": "v1"
     })
 
-class EHRJob(Resource):
+class EHRJobList(Resource):
+    @jwt_required
     def get(self):
-        return jsonify({
-            "name": "ehrjob",
-            "method": "get"
-        })
+        job_id = request.args.get('id')
+        return {
+            "name": self.__class__.__name__,
+            "method": request.method,
+            "job_id": job_id,
+            "request_user": get_jwt_identity()
+        }, 200
         
     def post(self):
-        return jsonify({
-            "name": "ehrjob",
-            "method": "post"
-        })
+        return {
+            "name": self.__class__.__name__,
+            "method": request.method,
+        },201
 
     def put(self):
-        return jsonify({
-            "name": "job",
-            "method": "put"
-        })
+        return {
+            "name": self.__class__.__name__,
+            "method": request.method
+        }, 201
 
     def delete(self):
         return jsonify({
-            "name": "job",
-            "method": "delete"
-        })
+            "name": self.__class__.__name__,
+            "method": request.method,
+        }), 204
 
     def patch(self):
-        return jsonify({
-            "name": "job",
-            "method": "patch"
-        })
+        return {
+            "name": self.__class__.__name__,
+            "method": request.method,
+        }, 201
 
-class EHRJobList(Resource):
+class EHRJob(Resource):
     def get(self,id):
+        job_id = request.args.get('id')
         return jsonify({
-            "name": "ehrjob",
-            "method": "get",
-            "params": id
+            "name": self.__class__.__name__,
+            "method": request.method,
+            "params": id,
+            "jobid": job_id
         })
         
     def post(self,id):
         return jsonify({
-            "name": "ehrjob",
-            "method": "post",
+            "name": self.__class__.__name__,
+            "method": request.method,
             "params": id,
         })

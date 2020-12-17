@@ -13,6 +13,7 @@
 from flask import Flask, json, request, jsonify,Response
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
+from flask_jwt_extended.utils import get_jwt_identity
 from flask_restful import Api, Resource
 
 
@@ -31,8 +32,8 @@ def create_ehr(app):
     from .app.ehr.views import ehrapi
     from .app.ehr.views import EHRJob,EHRJobList
 
-    ehrapi.add_resource(EHRJob, '/job', endpoint="jobs")
-    ehrapi.add_resource(EHRJobList, '/job/<string:id>', endpoint="job")
+    ehrapi.add_resource(EHRJobList, '/jobs', endpoint="jobs")
+    ehrapi.add_resource(EHRJob, '/jobs/<string:id>', endpoint="job")
     app.register_blueprint(ehrbp, url_prefix="/api/v1/ehr")
 
 def create_status_code(app): 
@@ -43,6 +44,15 @@ def create_status_code(app):
     @app.errorhandler(401)
     def unauthorized(err):
         return jsonify({"msg": str(err),"data": [],"code": 401}),401
+
+class TestFlaskExtend(object):
+    # custom extend for flask
+    def __init__(self, app):
+        self.init_app(app)
+
+    def init_app(self, app):
+        print("permission init app...")
+        self.app = app
 
 def create_app():
     from .db import db
@@ -68,7 +78,10 @@ def create_app():
 
     # register role verify middleware
     _app.wsgi_app = RoleMiddle(_app.wsgi_app)
-  
+
+    # custom extend for flask
+    perm = TestFlaskExtend(_app)
+
     # middle
     @_app.before_first_request
     def middle_first_request():
@@ -77,10 +90,12 @@ def create_app():
     @_app.before_request
     def middle_start_request():
         print("start acccessing " + request.path + " from " + request.remote_addr)
+        print(get_jwt_identity())
 
     @_app.after_request
     def middle_end_request(response):
         print("finnish  acccessing " + request.path + " from " + request.path )
+        print(get_jwt_identity())
         return response
 
     create_home(_app)  if 'home' in _app.config['APPS'] else None
