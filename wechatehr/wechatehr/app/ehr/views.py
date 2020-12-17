@@ -17,7 +17,6 @@ def ping():
 
 class EHRJob(Resource):
     def get(self):
-        abort(401)
         return jsonify({
             "name": "ehrjob",
             "method": "get"

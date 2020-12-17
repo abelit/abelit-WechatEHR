@@ -52,6 +52,7 @@ def register():
         res["code"] = status_code
         
     except Exception:
+        db.session.rollback()
         status_code = 500
         res["data"] = []
         res["msg"] = "add user failed"

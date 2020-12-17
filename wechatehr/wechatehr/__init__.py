@@ -10,7 +10,7 @@
 @Desc    :   None
 '''
 
-from flask import Flask, json, request, jsonify
+from flask import Flask, json, request, jsonify,Response
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from flask_restful import Api, Resource
@@ -41,16 +41,14 @@ def create_status_code(app):
         return jsonify({"msg": str(err),"data": [],"code": 404}),404
 
     @app.errorhandler(401)
-    def not_found(err):
-        return jsonify({"msg": str(err),"data": [],"code": 401}),401
-
-    @app.errorhandler(500)
-    def not_found(err):
+    def unauthorized(err):
         return jsonify({"msg": str(err),"data": [],"code": 401}),401
 
 def create_app():
     from .db import db
     from .config import config
+
+    from .middle.role import RoleMiddle
 
     # create flask instance
     _app = Flask(__name__)
@@ -68,6 +66,9 @@ def create_app():
     # create jwt instance
     jwt = JWTManager(_app)
 
+    # register role verify middleware
+    _app.wsgi_app = RoleMiddle(_app.wsgi_app)
+  
     # middle
     @_app.before_first_request
     def middle_first_request():
@@ -81,7 +82,7 @@ def create_app():
     def middle_end_request(response):
         print("finnish  acccessing " + request.path + " from " + request.path )
         return response
-    
+
     create_home(_app)  if 'home' in _app.config['APPS'] else None
     create_ehr(_app) if 'ehr' in _app.config['APPS'] else None
     create_auth(_app) if 'auth' in _app.config['APPS'] else None
