@@ -1,4 +1,4 @@
-from flask import request, jsonify, Blueprint
+from flask import request, jsonify, Blueprint, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import (
     jwt_required, create_access_token,
@@ -7,7 +7,7 @@ from flask_jwt_extended import (
 )
 
 from wechatehr.db import db
-from wechatehr.models.users import User
+from wechatehr.models.users import User, Role, Api
 from sqlalchemy import or_
 import datetime
 
@@ -86,8 +86,8 @@ def login():
         else:
             # Use create_access_token() and create_refresh_token() to create our
             # access and refresh tokens
-            access_expires = datetime.timedelta(seconds=3600)
-            refresh_expires = datetime.timedelta(seconds=86400)
+            access_expires = datetime.timedelta(seconds=current_app.config.get('JWT_ACCESS_TOKEN_EXPIRES'))
+            refresh_expires = datetime.timedelta(seconds=current_app.config.get('JWT_REFRESH_ACCESS_TOKEN_EXPIRES'))
             status_code = 200
             res["data"] = [{
                 'access_token': create_access_token(identity=user.username, expires_delta=access_expires),
@@ -113,7 +113,7 @@ def login():
 @jwt_refresh_token_required
 def refresh():
     current_user = get_jwt_identity()
-    access_expires = datetime.timedelta(seconds=3600)
+    access_expires = datetime.timedelta(seconds=current_app.config.get('JWT_ACCESS_TOKEN_EXPIRES'))
     result = {
         'access_token': create_access_token(identity=current_user, expires_delta=access_expires)
     }
@@ -125,3 +125,57 @@ def refresh():
 def protected():
     username = get_jwt_identity()
     return jsonify(logged_in_as=username), 200
+
+@authbp.route('/role/create', methods=['POST'])
+def create_role():
+    alias = request.json.get("alias", None)
+    name =  request.json.get("name", None)
+    status = request.json.get("status", 1)
+
+    status_code = None
+    res = {"data": [], "msg": "", "code": None}
+
+    role = Role(alias=alias, name=name, status=status)
+    try:
+        db.session.add(role)
+        db.session.commit()
+        status_code = 200
+        res["data"] = []
+        res["msg"] = "add role sccuessfully"
+        res["code"] = status_code
+        
+    except Exception:
+        db.session.rollback()
+        status_code = 500
+        res["data"] = []
+        res["msg"] = "add role failed"
+        res["code"] = status_code
+
+    return jsonify(res), status_code
+
+@authbp.route('/api/create', methods=['POST'])
+def create_api():
+    name =  request.json.get("name", None)
+    path = request.json.get("path", None)
+    status = request.json.get("status", 1)
+
+    status_code = None
+    res = {"data": [], "msg": "", "code": None}
+
+    api = Api(name=name, path=path, status=status)
+    try:
+        db.session.add(api)
+        db.session.commit()
+        status_code = 200
+        res["data"] = []
+        res["msg"] = "add api sccuessfully"
+        res["code"] = status_code
+        
+    except Exception:
+        db.session.rollback()
+        status_code = 500
+        res["data"] = []
+        res["msg"] = "add api failed"
+        res["code"] = status_code
+
+    return jsonify(res), status_code

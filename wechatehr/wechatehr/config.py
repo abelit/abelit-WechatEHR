@@ -56,13 +56,7 @@ class BaseConfig(object):
     # 启动的app组件
     APPS = ['err','home','ehr', 'auth']
 
-    # Scheduler
-    # GLOBAL_SCHEDULER_ENABLE = False
-    # GLOBAL_SCHEDULER_ID = '1001'
-    # GLOBAL_SCHEDULER_INTERVAL = 5
-    # APP_SCHEDULER_ENABLE = False
-
-    # 配置数据库
+    # 配置数据库 
     # 使用docker环境时把127.0.0.1改为db的容器名称
     DIALECT = 'mysql'
     DRIVER = 'pymysql'
@@ -96,10 +90,10 @@ class BaseConfig(object):
     # 配值JSON是否自动排序，默认为启动
     JSON_SORT_KEYS = False
 
-    # 配置Flask JWT Extended认证加密密钥
+    # 配置Flask-JWT-Extended认证加密密钥
     JWT_SECRET_KEY = '+\x1ba][o\x9e\x32\xa5MGsr\xa8x3\xc04\xd3\x0f\x11\x6a<z1'
-    JWT_ACCESS_TOKEN_EXPIRES = ''
-    JWT_REFRESH_ACCESS_TOKEN_EXPIRES = ''
+    JWT_ACCESS_TOKEN_EXPIRES = 3600
+    JWT_REFRESH_ACCESS_TOKEN_EXPIRES = 3600 * 24 * 7
 
     @staticmethod
     def init_app(app):

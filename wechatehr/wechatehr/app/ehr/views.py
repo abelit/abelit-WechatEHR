@@ -4,6 +4,8 @@ from flask_restful import Api, Resource, abort,request
 
 from flask_jwt_extended import jwt_required
 
+from wechatehr.middleware.auth import role_required
+
 ehrbp = Blueprint("ehrbp", __name__)
 
 ehrapi = Api(ehrbp)
@@ -20,13 +22,13 @@ def ping():
 
 class EHRJobList(Resource):
     @jwt_required
+    @role_required
     def get(self):
         job_id = request.args.get('id')
         return {
             "name": self.__class__.__name__,
             "method": request.method,
-            "job_id": job_id,
-            "request_user": get_jwt_identity()
+            "job_id": job_id
         }, 200
         
     def post(self):
@@ -60,7 +62,8 @@ class EHRJob(Resource):
             "name": self.__class__.__name__,
             "method": request.method,
             "params": id,
-            "jobid": job_id
+            "jobid": job_id,
+            "path": request.full_path
         })
         
     def post(self,id):

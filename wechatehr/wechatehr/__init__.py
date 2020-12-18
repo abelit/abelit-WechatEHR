@@ -45,20 +45,12 @@ def create_status_code(app):
     def unauthorized(err):
         return jsonify({"msg": str(err),"data": [],"code": 401}),401
 
-class TestFlaskExtend(object):
-    # custom extend for flask
-    def __init__(self, app):
-        self.init_app(app)
-
-    def init_app(self, app):
-        print("permission init app...")
-        self.app = app
-
 def create_app():
     from .db import db
     from .config import config
 
-    from .middle.role import RoleMiddle
+    from .middleware.blocklist import BlockMiddle
+    from .extentions.testextend import TestFlaskExtend
 
     # create flask instance
     _app = Flask(__name__)
@@ -77,10 +69,10 @@ def create_app():
     jwt = JWTManager(_app)
 
     # register role verify middleware
-    _app.wsgi_app = RoleMiddle(_app.wsgi_app)
+    _app.wsgi_app = BlockMiddle(_app.wsgi_app)
 
     # custom extend for flask
-    perm = TestFlaskExtend(_app)
+    testext = TestFlaskExtend(_app)
 
     # middle
     @_app.before_first_request
